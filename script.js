@@ -1,3 +1,4 @@
+'use strict'
 
 //CHNAGE THUMBNAIL
 let selectedValue
@@ -74,7 +75,13 @@ image_input.addEventListener("change", function() {
 
 let submit = document.querySelector('.submit')
 
+
+
 submit.addEventListener('click',function(){
+
+
+
+
     let user_name = document.querySelector('.fn').value
     document.querySelector('.about-name').textContent = user_name;
 
@@ -141,3 +148,29 @@ function myyFunction() {
 
 // const element = document.getElementById("demo");
 // element.remove();
+
+   
+function autoClick(){
+    $("#download").click();
+  }
+
+  $(document).ready(function(){
+    var element = $("#htmlContent");
+
+    $("#download").on('click', function(){
+
+      html2canvas(element, {
+        onrendered: function(canvas) {
+          var imageData = canvas.toDataURL("image/jpg");
+          var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+          $("#download").attr("download", "image.jpg").attr("href", newData);
+        }
+      });
+
+    });
+  })
+  
+
+  function myFunctionn() {
+    document.getElementById("myDIV").style.opacity = "1";
+  }
