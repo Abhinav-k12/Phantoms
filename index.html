@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic portfolio</title>
+    <title>Build your portfolio!</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+
+
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload = "autoClick();">
     <!-- <div class="top-bar"></div> -->
     <div class="main">
         <!--WELCOME HEADER-->
@@ -18,7 +24,7 @@
         <div class="welcome-page">
             
             <div class="welcome-content">
-                <div class="welcome-title">create a <br>portfolio<br>in minutes</div>
+                <div class="welcome-title">create a <br>portfolio<br>in minutes!</div>
                 <div class="welcome-button"> 
                     <button class="start"><a href="#down" class="down">start-building</a></button>
                     
@@ -166,7 +172,7 @@
 
     </div>
     <!--OUTPUT-->
-        <div class="final">
+        <div class="final" id="htmlContent">
 
             <div class="thumbnail"></div>
             <div class="profile-output" id="display-image1"></div>
@@ -246,5 +252,9 @@
 <div class="btn-center1">
     <button class="submit1" onclick="myyFunction()">finish building</button>
 </div>
+<center>
+    <a class="pdf" id="download">Download</a>
+</center>
+
 </body>
 </html>
